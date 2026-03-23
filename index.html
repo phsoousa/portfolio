@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro | Engenheiro de Dados</title>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #020617;
+      color: #e2e8f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    h1 { font-size: 2.8rem; }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* GRID TECH */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .card-tech {
+      background: #020617;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #1e293b;
+      transition: all 0.3s ease;
+    }
+
+    .card-tech:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: #38bdf8;
+      box-shadow: 0 10px 30px rgba(56,189,248,0.15);
+    }
+
+    .card-tech img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .card-tech p {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* PROJETOS */
+    .card {
+      background: #0f172a;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 15px;
+      transition: 0.3s;
+      border: 1px solid #1e293b;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    /* BOTÕES */
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 12px;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
+      transform: translateY(-3px);
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Pedro Henrique 👋</h1>
+  <p>Engenheiro de Dados Jr</p>
+  <p>Construo pipelines escaláveis, processamento distribuído e soluções em cloud 🚀</p>
+</header>
+
+<section>
+  <h2>Tech Stack</h2>
+
+  <div class="grid">
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+      <p>Python</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+      <p>SQL</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg">
+      <p>Spark</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png">
+      <p>Databricks</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
+      <p>GCP</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
+      <p>AWS</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg">
+      <p>Airflow</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
+      <p>Pandas</p>
+    </div>
+
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
+      <p>PostgreSQL</p>
+    </div>
+
+    <div class="card-tech">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+      <p>Git</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Projetos</h2>
+
+  <div class="card">
+    <h3>Pipeline ETL com API</h3>
+    <p>Ingestão de dados via API, transformação com Pandas e carga em banco relacional.</p>
+    <p><strong>Tecnologias:</strong> Python | SQL</p>
+    <a href="#" target="_blank">Ver projeto</a>
+  </div>
+
+  <div class="card">
+    <h3>Pipeline com Airflow</h3>
+    <p>Orquestração de pipelines automatizados com Airflow.</p>
+    <p><strong>Tecnologias:</strong> Airflow | AWS</p>
+    <a href="#" target="_blank">Ver projeto</a>
+  </div>
+
+  <div class="card">
+    <h3>Processamento com PySpark</h3>
+    <p>Processamento distribuído de dados com Spark.</p>
+    <p><strong>Tecnologias:</strong> Spark | Databricks</p>
+    <a href="#" target="_blank">Ver projeto</a>
+  </div>
+
+</section>
+
+<section>
+  <h2>Contato</h2>
+
+  <div style="text-align:center;">
+
+    <a href="ph.sousa92@gmail.com" class="btn">Email</a>
+
+    <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">
+      LinkedIn
+    </a>
+
+    <a href="https://github.com/phsoousa" target="_blank" class="btn">
+      GitHub
+    </a>
+
+  </div>
+
+</section>
+
+</body>
+</html>
