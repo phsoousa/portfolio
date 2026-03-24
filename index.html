@@ -9,7 +9,7 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background: #020617;
+      background: linear-gradient(180deg, #020617, #020617, #0f172a);
       color: #e2e8f0;
     }
 
@@ -21,7 +21,7 @@
     h1 { font-size: 2.8rem; }
 
     section {
-      padding: 50px 20px;
+      padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
@@ -29,6 +29,32 @@
     h2 {
       text-align: center;
       margin-bottom: 30px;
+    }
+
+    /* SOBRE */
+    .sobre-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .foto-perfil {
+      width: 220px;
+      height: 220px;
+      border-radius: 20px;
+      object-fit: cover;
+      border: 2px solid #38bdf8;
+      box-shadow: 0 0 25px rgba(56,189,248,0.4);
+    }
+
+    .sobre-texto {
+      max-width: 500px;
+    }
+
+    .sobre-texto p {
+      line-height: 1.6;
     }
 
     /* GRID TECH */
@@ -44,13 +70,13 @@
       border-radius: 20px;
       text-align: center;
       border: 1px solid #1e293b;
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     .card-tech:hover {
-      transform: translateY(-8px) scale(1.02);
+      transform: translateY(-8px);
       border-color: #38bdf8;
-      box-shadow: 0 10px 30px rgba(56,189,248,0.15);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.2);
     }
 
     .card-tech img {
@@ -60,19 +86,14 @@
       margin-bottom: 10px;
     }
 
-    .card-tech p {
-      margin: 0;
-      font-weight: 600;
-    }
-
     /* PROJETOS */
     .card {
       background: #0f172a;
       padding: 25px;
       margin: 20px 0;
       border-radius: 15px;
-      transition: 0.3s;
       border: 1px solid #1e293b;
+      transition: 0.3s;
     }
 
     .card:hover {
@@ -102,119 +123,135 @@
       transform: translateY(-3px);
     }
 
+    /* ANIMAÇÃO */
+    .fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.6s;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 </head>
 <body>
 
-<header>
+<header class="fade">
   <h1>Pedro Henrique 👋</h1>
   <p>Engenheiro de Dados Jr</p>
   <p>Construo pipelines escaláveis, processamento distribuído e soluções em cloud 🚀</p>
 </header>
 
-<section>
-  <h2>Tech Stack</h2>
+<section class="fade">
+  <div class="sobre-container">
 
-  <div class="grid">
+    <img src="assets/foto.jpg" class="foto-perfil">
 
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-      <p>Python</p>
-    </div>
+    <div class="sobre-texto">
+      <h2>Sobre mim</h2>
 
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
-      <p>SQL</p>
-    </div>
+      <p>
+        Engenheiro de Dados em desenvolvimento com foco em construção de pipelines ETL,
+        ingestão de dados via APIs e processamento distribuído com Spark.
+      </p>
 
-    <div class="card-tech">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg">
-      <p>Spark</p>
-    </div>
+      <p>
+        Experiência prática com Python, SQL, Airflow e Databricks, atuando desde a coleta
+        até a transformação e armazenamento de dados.
+      </p>
 
-    <div class="card-tech">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png">
-      <p>Databricks</p>
-    </div>
+      <p>
+        Busco oportunidades para atuar com dados em ambientes cloud (AWS e GCP),
+        criando soluções escaláveis e eficientes.
+      </p>
 
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg">
-      <p>GCP</p>
-    </div>
-
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
-      <p>AWS</p>
-    </div>
-
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg">
-      <p>Airflow</p>
-    </div>
-
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
-      <p>Pandas</p>
-    </div>
-
-
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-      <p>PostgreSQL</p>
-    </div>
-
-    <div class="card-tech">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-      <p>Git</p>
     </div>
 
   </div>
 </section>
 
-<section>
+<section class="fade">
+  <h2>Tech Stack</h2>
+
+  <div class="grid">
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><p>SQL</p></div>
+
+    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg"><p>Spark</p></div>
+
+    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png"><p>Databricks</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><p>GCP</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"><p>AWS</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg"><p>Airflow</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"><p>Pandas</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"><p>PostgreSQL</p></div>
+
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><p>Git</p></div>
+
+  </div>
+</section>
+
+<section class="fade">
   <h2>Projetos</h2>
 
   <div class="card">
     <h3>Pipeline ETL com API</h3>
-    <p>Ingestão de dados via API, transformação com Pandas e carga em banco relacional.</p>
-    <p><strong>Tecnologias:</strong> Python | SQL</p>
+    <p>Extração, transformação e carga de dados utilizando Python e SQL.</p>
     <a href="#" target="_blank">Ver projeto</a>
   </div>
 
   <div class="card">
     <h3>Pipeline com Airflow</h3>
-    <p>Orquestração de pipelines automatizados com Airflow.</p>
-    <p><strong>Tecnologias:</strong> Airflow | AWS</p>
+    <p>Automação e orquestração de pipelines de dados.</p>
     <a href="#" target="_blank">Ver projeto</a>
   </div>
 
   <div class="card">
     <h3>Processamento com PySpark</h3>
-    <p>Processamento distribuído de dados com Spark.</p>
-    <p><strong>Tecnologias:</strong> Spark | Databricks</p>
+    <p>Processamento distribuído com Spark e Databricks.</p>
     <a href="#" target="_blank">Ver projeto</a>
   </div>
 
 </section>
 
-<section>
+<section class="fade">
   <h2>Contato</h2>
 
   <div style="text-align:center;">
-
     <a href="ph.sousa92@gmail.com" class="btn">Email</a>
-
-    <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">
-      LinkedIn
-    </a>
-
-    <a href="https://github.com/phsoousa" target="_blank" class="btn">
-      GitHub
-    </a>
-
+    <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">LinkedIn</a>
+    <a href="https://github.com/phsoousa" target="_blank" class="btn">GitHub</a>
   </div>
 
 </section>
+
+<script>
+  const elements = document.querySelectorAll('.fade');
+
+  function showOnScroll() {
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        el.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', showOnScroll);
+  showOnScroll();
+</script>
 
 </body>
 </html>
