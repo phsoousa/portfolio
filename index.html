@@ -26,7 +26,6 @@
       padding: 12px 24px;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
       gap: 10px;
     }
 
@@ -38,24 +37,6 @@
       border-radius: 8px;
       font-weight: 700;
       cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .lang-btn:hover {
-      background: #38bdf8;
-      color: #020617;
-      transform: translateY(-2px);
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-family: 'Poppins', sans-serif;
-      text-align: center;
-      margin-bottom: 40px;
     }
 
     header {
@@ -67,25 +48,13 @@
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      object-fit: cover;
       border: 4px solid #38bdf8;
       margin-bottom: 20px;
-    }
-
-    .subtitulo {
-      color: #38bdf8;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-    }
-
-    .top-buttons {
-      margin-top: 20px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
       margin: 8px;
       padding: 10px 20px;
@@ -94,37 +63,12 @@
       color: #020617;
       font-weight: bold;
       text-decoration: none;
-      transition: 0.3s;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #0ea5e9;
-      transform: translateY(-2px);
-    }
-
-    .btn-icon {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-    }
-
-    .github-icon {
-      filter: brightness(0) invert(1);
     }
 
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
-    }
-
-    .sobre-texto {
-      max-width: 700px;
-      margin: auto;
-      text-align: center;
-      line-height: 1.6;
     }
 
     .grid {
@@ -138,314 +82,112 @@
       padding: 20px;
       border-radius: 15px;
       text-align: center;
-      transition: 0.3s;
-      border: 1px solid transparent;
-    }
-
-    .card-tech:hover {
-      transform: translateY(-5px);
-      border: 1px solid #38bdf8;
     }
 
     .card-tech img {
       width: 45px;
-      height: 45px;
-      object-fit: contain;
       margin-bottom: 10px;
     }
 
     .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 28px;
-      max-width: 820px;
-      margin: 0 auto;
+      max-width: 800px;
+      margin: auto;
     }
 
     .card {
       background: #0f172a;
       border-radius: 18px;
-      overflow: hidden;
-      transition: 0.3s;
+      padding: 20px;
       border: 1px solid #1e293b;
-      max-width: 820px;
-      margin: 0 auto;
     }
 
-    .card:hover {
-      transform: translateY(-7px);
-      border: 1px solid #38bdf8;
-      box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
-    }
-
-    .project-image-wrap {
-      background: #020617;
-      padding: 12px;
-      border-bottom: 1px solid #1e293b;
-    }
-
-    .project-image-wrap img {
+    /* NOVA IMAGEM */
+    .project-img {
       width: 100%;
       height: auto;
-      max-height: 320px;
       object-fit: contain;
       display: block;
-      margin: 0 auto;
-      border-radius: 12px;
-    }
-
-    .card-content {
-      padding: 22px;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #ffffff;
-    }
-
-    .card p {
-      color: #cbd5e1;
-      line-height: 1.6;
-    }
-
-    .tags {
       margin-bottom: 15px;
     }
 
     .tags span {
-      display: inline-block;
       background: #172554;
       color: #93c5fd;
-      padding: 6px 10px;
+      padding: 5px;
       margin: 3px;
-      border-radius: 8px;
-      font-size: 0.75rem;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2.3rem;
-      }
-
-      .topbar {
-        justify-content: center;
-      }
-
-      .projects-grid {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-      }
-
-      .project-image-wrap img {
-        max-height: 240px;
-      }
+      border-radius: 6px;
+      font-size: 12px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="topbar">
-    <button onclick="setLang('en')" class="lang-btn">🇺🇸 English</button>
-    <button onclick="setLang('pt')" class="lang-btn">🇧🇷 Português</button>
+<div class="topbar">
+  <button onclick="setLang('en')" class="lang-btn">EN</button>
+  <button onclick="setLang('pt')" class="lang-btn">PT</button>
+</div>
+
+<header>
+  <img src="assets/foto.jpg" class="foto-perfil">
+  <h1>Pedro Henrique</h1>
+
+  <p data-en="Data Engineer" data-pt="Engenheiro de Dados"></p>
+
+  <div>
+    <a href="https://wa.me/5521994536481" class="btn">WhatsApp</a>
+    <a href="https://linkedin.com" class="btn">LinkedIn</a>
+    <a href="https://github.com/phsoousa" class="btn">GitHub</a>
   </div>
+</header>
 
-  <header>
-    <img src="assets/foto.jpg" class="foto-perfil" alt="Pedro Henrique" />
+<section>
+  <h2 data-en="Tech Stack" data-pt="Tech Stack"></h2>
 
-    <h1>Pedro Henrique</h1>
+  <div class="grid">
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
+    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg"><p>Spark</p></div>
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"><p>Power BI</p></div>
+  </div>
+</section>
 
-    <p 
-      class="subtitulo"
-      data-en="Data Engineer"
-      data-pt="Engenheiro de Dados">
-    </p>
+<section>
+  <h2 data-en="Projects" data-pt="Projetos"></h2>
 
-    <div class="top-buttons">
-      <a href="https://wa.me/5521994536481" target="_blank" class="btn">
-        <img 
-          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-          alt="WhatsApp" 
-          class="btn-icon"
-        />
-        WhatsApp
+  <div class="projects-grid">
+    <div class="card">
+
+      <!-- IMAGEM AJUSTADA -->
+      <img src="assets/webtran-card.png" class="project-img">
+
+      <div class="tags">
+        <span>Python</span>
+        <span>Airflow</span>
+        <span>Selenium</span>
+      </div>
+
+      <h3>WebTran Data Pipeline</h3>
+
+      <p data-en="End-to-end pipeline for automation and analytics"
+         data-pt="Pipeline completo para automação e análise"></p>
+
+      <a href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline" class="btn">
+        View Project
       </a>
 
-      <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">
-        <img 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
-          alt="LinkedIn" 
-          class="btn-icon"
-        />
-        LinkedIn
-      </a>
-
-      <a href="https://github.com/phsoousa" target="_blank" class="btn">
-        <img 
-          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-          alt="GitHub" 
-          class="btn-icon github-icon"
-        />
-        GitHub
-      </a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section>
-    <h2 
-      data-en="About Me"
-      data-pt="Sobre mim">
-    </h2>
-
-    <div class="sobre-texto">
-      <p
-        data-en="Data Engineer in development focused on ETL pipelines, workflow orchestration with Airflow and data processing with Python."
-        data-pt="Engenheiro de Dados em desenvolvimento com foco em pipelines ETL, orquestração com Airflow e processamento de dados com Python.">
-      </p>
-
-      <p
-        data-en="Hands-on experience with data ingestion, transformation and analysis using modern tools from the data ecosystem."
-        data-pt="Experiência prática com ingestão, transformação e análise de dados utilizando tecnologias modernas do ecossistema de dados.">
-      </p>
-
-      <p
-        data-en="Currently seeking my first opportunity as a Data Engineer."
-        data-pt="Buscando minha primeira oportunidade como Engenheiro de Dados.">
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2 
-      data-en="Tech Stack"
-      data-pt="Tech Stack">
-    </h2>
-
-    <div class="grid">
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-        <p>Python</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL">
-        <p>SQL</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg" alt="Spark">
-        <p>Spark</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png" alt="Databricks">
-        <p>Databricks</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow">
-        <p>Airflow</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS">
-        <p>AWS</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP">
-        <p>GCP</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
-        <p>Pandas</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-        <p>PostgreSQL</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
-        <p>Docker</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI">
-        <p>Power BI</p>
-      </div>
-
-      <div class="card-tech">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-        <p>Git</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 
-      data-en="Featured Projects"
-      data-pt="Projetos em Destaque">
-    </h2>
-
-    <div class="projects-grid">
-      <div class="card">
-        <div class="project-image-wrap">
-          <img src="assets/webtran-card.png" alt="WebTran Data Pipeline">
-        </div>
-
-        <div class="card-content">
-          <div class="tags">
-            <span>Python</span>
-            <span>Selenium</span>
-            <span>Airflow</span>
-            <span>Pandas</span>
-            <span>Power BI</span>
-            <span>Docker</span>
-          </div>
-
-          <h3>Sinistralidade Data Pipeline</h3>
-
-          <p
-            data-en="End-to-end Data Engineering pipeline designed to automate data extraction, transformation and delivery for analytics."
-            data-pt="Pipeline completo de Engenharia de Dados para automatizar extração, tratamento e disponibilização de dados para análise.">
-          </p>
-
-          <p
-            data-en="Includes web automation, ZIP file download and extraction, data cleaning with Pandas, duplicate removal and generation of analytical datasets for Power BI."
-            data-pt="Inclui automação web, download e extração de arquivos ZIP, tratamento com Pandas, remoção de duplicados e geração de datasets analíticos para Power BI.">
-          </p>
-
-          <a 
-            href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline" 
-            target="_blank" 
-            class="btn"
-            data-en="View Project"
-            data-pt="Ver Projeto">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function setLang(lang) {
-      document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
-
-      document.querySelectorAll("[data-en]").forEach(element => {
-        element.innerText = element.getAttribute("data-" + lang);
-      });
-
-      document.title = lang === "pt"
-        ? "Pedro | Engenheiro de Dados"
-        : "Pedro | Data Engineer";
-    }
-
-    setLang("en");
-  </script>
+<script>
+function setLang(lang) {
+  document.querySelectorAll("[data-en]").forEach(el => {
+    el.innerText = el.getAttribute("data-" + lang);
+  });
+}
+setLang("en");
+</script>
 
 </body>
 </html>
