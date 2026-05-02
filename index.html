@@ -16,7 +16,6 @@
       color: #e2e8f0;
     }
 
-    /* TOP BAR FIXA */
     .topbar {
       position: sticky;
       top: 0;
@@ -84,7 +83,10 @@
     }
 
     .btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
       margin: 8px;
       padding: 10px 20px;
       border-radius: 10px;
@@ -100,6 +102,16 @@
     .btn:hover {
       background: #0ea5e9;
       transform: translateY(-2px);
+    }
+
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+
+    .github-icon {
+      filter: brightness(0) invert(1);
     }
 
     section {
@@ -142,7 +154,6 @@
       margin-bottom: 10px;
     }
 
-    /* PROJETOS */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -252,9 +263,32 @@
     </p>
 
     <div class="top-buttons">
-      <a href="mailto:ph.sousa92@gmail.com" class="btn">Email</a>
-      <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">LinkedIn</a>
-      <a href="https://github.com/phsoousa" target="_blank" class="btn">GitHub</a>
+      <a href="https://wa.me/5521994536481" target="_blank" class="btn">
+        <img 
+          src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+          alt="WhatsApp" 
+          class="btn-icon"
+        />
+        WhatsApp
+      </a>
+
+      <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">
+        <img 
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+          alt="LinkedIn" 
+          class="btn-icon"
+        />
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/phsoousa" target="_blank" class="btn">
+        <img 
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+          alt="GitHub" 
+          class="btn-icon github-icon"
+        />
+        GitHub
+      </a>
     </div>
   </header>
 
@@ -335,6 +369,16 @@
       </div>
 
       <div class="card-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+        <p>Docker</p>
+      </div>
+
+      <div class="card-tech">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI">
+        <p>Power BI</p>
+      </div>
+
+      <div class="card-tech">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
         <p>Git</p>
       </div>
@@ -348,7 +392,6 @@
     </h2>
 
     <div class="projects-grid">
-
       <div class="card">
         <div class="project-image-wrap">
           <img src="assets/webtran-card.png" alt="WebTran Data Pipeline">
@@ -364,7 +407,7 @@
             <span>Docker</span>
           </div>
 
-          <h3>WebTran Data Pipeline</h3>
+          <h3>Sinistralidade Data Pipeline</h3>
 
           <p
             data-en="End-to-end Data Engineering pipeline designed to automate data extraction, transformation and delivery for analytics."
@@ -385,7 +428,6 @@
           </a>
         </div>
       </div>
-
     </div>
   </section>
 
