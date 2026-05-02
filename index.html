@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonte Premium -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <title>Pedro | Engenheiro de Dados</title>
+  <title>Pedro | Data Engineer</title>
 
   <style>
     body {
@@ -25,10 +24,9 @@
     h2 {
       font-family: 'Poppins', sans-serif;
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
-    /* HEADER */
     header {
       text-align: center;
       padding: 60px 20px;
@@ -49,10 +47,12 @@
       font-weight: 600;
     }
 
-    /* BOTÕES TOPO */
     .top-buttons {
-      text-align: center;
       margin-top: 20px;
+    }
+
+    .language-buttons {
+      margin-top: 18px;
     }
 
     .btn {
@@ -65,10 +65,14 @@
       font-weight: bold;
       text-decoration: none;
       transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
     }
 
     .btn:hover {
       background: #0ea5e9;
+      transform: translateY(-2px);
     }
 
     section {
@@ -77,7 +81,6 @@
       margin: auto;
     }
 
-    /* SOBRE */
     .sobre-texto {
       max-width: 700px;
       margin: auto;
@@ -85,7 +88,6 @@
       line-height: 1.6;
     }
 
-    /* TECH */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -110,118 +112,191 @@
       margin-bottom: 10px;
     }
 
-    /* PROJETOS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
     .card {
       background: #0f172a;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 15px;
+      border-radius: 18px;
+      overflow: hidden;
       transition: 0.3s;
+      border: 1px solid #1e293b;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-7px);
       border: 1px solid #38bdf8;
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
     }
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
     }
 
+    .card-content {
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
+
+    .tags {
+      margin-bottom: 15px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #172554;
+      color: #93c5fd;
+      padding: 6px 10px;
+      margin: 3px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: bold;
+    }
   </style>
 </head>
+
 <body>
 
 <header>
 
-  <img src="assets/foto.jpg" class="foto-perfil">
+  <img src="assets/foto.jpg" class="foto-perfil" alt="Pedro Henrique">
 
   <h1>Pedro Henrique</h1>
-  <p class="subtitulo">Engenheiro de Dados </p>
+
+  <p 
+    class="subtitulo"
+    data-en="Data Engineer"
+    data-pt="Engenheiro de Dados">
+  </p>
 
   <div class="top-buttons">
-    <a href="ph.sousa92@gmail.com" class="btn">Email</a>
+    <a href="mailto:ph.sousa92@gmail.com" class="btn">Email</a>
     <a href="https://www.linkedin.com/in/pedro-henrique-sousa-/" target="_blank" class="btn">LinkedIn</a>
     <a href="https://github.com/phsoousa" target="_blank" class="btn">GitHub</a>
+  </div>
+
+  <div class="language-buttons">
+    <button onclick="setLang('en')" class="btn">🇺🇸 English</button>
+    <button onclick="setLang('pt')" class="btn">🇧🇷 Português</button>
   </div>
 
 </header>
 
 <section>
-  <h2>Sobre mim</h2>
+  <h2 
+    data-en="About Me"
+    data-pt="Sobre mim">
+  </h2>
 
   <div class="sobre-texto">
-    <p>
-      Engenheiro de Dados em desenvolvimento com foco em pipelines ETL,
-      processamento distribuído com Spark e orquestração com Airflow.
+    <p
+      data-en="Data Engineer in development focused on ETL pipelines, workflow orchestration with Airflow and data processing with Python."
+      data-pt="Engenheiro de Dados em desenvolvimento com foco em pipelines ETL, orquestração com Airflow e processamento de dados com Python.">
     </p>
 
-    <p>
-      Experiência prática com Python e SQL na ingestão, transformação e
-      armazenamento de dados em ambientes cloud (AWS e GCP).
+    <p
+      data-en="Hands-on experience with data ingestion, transformation and analysis using modern tools from the data ecosystem."
+      data-pt="Experiência prática com ingestão, transformação e análise de dados utilizando tecnologias modernas do ecossistema de dados.">
     </p>
 
-    <p>
-      Busco minha primeira oportunidade na área para aplicar e evoluir
-      minhas habilidades com dados.
+    <p
+      data-en="Currently seeking my first opportunity as a Data Engineer."
+      data-pt="Buscando minha primeira oportunidade como Engenheiro de Dados.">
     </p>
   </div>
-
 </section>
 
 <section>
-  <h2>Tech Stack</h2>
+  <h2 
+    data-en="Tech Stack"
+    data-pt="Tech Stack">
+  </h2>
 
   <div class="grid">
     <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><p>Python</p></div>
     <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"><p>SQL</p></div>
-    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg"><p>Spark</p></div>
-    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Databricks_Logo.png"><p>Databricks</p></div>
     <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg"><p>Airflow</p></div>
-    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"><p>AWS</p></div>
-    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><p>GCP</p></div>
-    <div class="card-tech">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
-  <p>Pandas</p>
-</div>
-
-<div class="card-tech">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-  <p>PostgreSQL</p>
-</div>
-
-<div class="card-tech">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-  <p>Git</p>
-</div>
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"><p>Pandas</p></div>
+    <div class="card-tech"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><p>Docker</p></div>
+    <div class="card-tech"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg"><p>Power BI</p></div>
   </div>
-
 </section>
 
 <section>
-  <h2>Projetos</h2>
+  <h2 
+    data-en="Featured Projects"
+    data-pt="Projetos em Destaque">
+  </h2>
 
- 
-  <div class="card">
-  <h3>Airflow Data Pipeline</h3>
+  <div class="projects-grid">
 
-  <p>
-    End-to-end data pipeline using Python, Selenium, Apache Airflow and Pandas
-    to automate data extraction, transformation and delivery for analytics.
-  </p>
+    <div class="card">
+      <img src="assets/webtran-card.png" alt="WebTran Pipeline">
 
-  <p>
-    Includes automated file download, ZIP extraction, data cleaning,
-    duplicate removal and generation of analytical datasets for Power BI.
-  </p>
+      <div class="card-content">
+        <div class="tags">
+          <span>Python</span>
+          <span>Selenium</span>
+          <span>Airflow</span>
+          <span>Pandas</span>
+          <span>Power BI</span>
+          <span>Docker</span>
+        </div>
 
-  <a href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline.git" target="_blank">
-    Ver projeto
-  </a>
-</div>
+        <h3>WebTran Data Pipeline</h3>
 
+        <p
+          data-en="End-to-end Data Engineering pipeline designed to automate data extraction, transformation and delivery for analytics."
+          data-pt="Pipeline completo de Engenharia de Dados para automatizar extração, tratamento e disponibilização de dados para análise.">
+        </p>
+
+        <p
+          data-en="Includes web automation, file downloads, ZIP extraction, data cleaning with Pandas, duplicate removal and generation of analytical datasets."
+          data-pt="Inclui automação web, download de arquivos, extração de ZIP, tratamento com Pandas, remoção de duplicados e geração de datasets analíticos.">
+        </p>
+
+        <a 
+          href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline" 
+          target="_blank" 
+          class="btn"
+          data-en="View Project"
+          data-pt="Ver Projeto">
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+
+    document.querySelectorAll("[data-en]").forEach(element => {
+      element.innerText = element.getAttribute("data-" + lang);
+    });
+
+    document.title = lang === "pt"
+      ? "Pedro | Engenheiro de Dados"
+      : "Pedro | Data Engineer";
+  }
+
+  setLang("en");
+</script>
 
 </body>
 </html>
