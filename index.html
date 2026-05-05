@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <title>Pedro | Data Engineer</title>
 
@@ -45,11 +45,52 @@
     }
 
     .foto-perfil {
-      width: 160px;
-      height: 160px;
+      width: 190px;
+      height: 190px;
       border-radius: 50%;
       border: 4px solid #38bdf8;
       margin-bottom: 20px;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .foto-perfil:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.65);
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .title-highlight {
+      font-size: 22px;
+      font-weight: 700;
+      color: #38bdf8;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: 0.5px;
+      min-height: 32px;
+    }
+
+    .typing::after {
+      content: "|";
+      margin-left: 4px;
+      color: #38bdf8;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
+    }
+
+    .about {
+      max-width: 720px;
+      margin: 15px auto;
+      color: #94a3b8;
+      line-height: 1.7;
+      font-size: 16px;
     }
 
     .btn {
@@ -144,10 +185,6 @@
       box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
     }
 
-    .cert-link .card {
-      transition: border 0.3s ease, background 0.3s ease;
-    }
-
     .cert-link:hover .card {
       border: 1px solid #38bdf8;
       background: #111c33;
@@ -164,13 +201,17 @@
 
 <header>
   <img src="assets/foto.jpg" class="foto-perfil">
+
   <h1>Pedro Henrique</h1>
 
-  <p data-en="Data Engineer" data-pt="Engenheiro de Dados"></p>
+  <p class="title-highlight typing"
+     id="typing-title"
+     data-en="Data Engineer"
+     data-pt="Engenheiro de Dados"></p>
 
-  <p style="max-width:600px;margin:10px auto;color:#94a3b8;"
-     data-en="Data Engineer focused on building scalable data pipelines, ETL processes and cloud solutions."
-     data-pt="Engenheiro de Dados focado na construção de pipelines escaláveis, processos de ETL e soluções em nuvem.">
+  <p class="about"
+     data-en="Welcome to my portfolio. Here you will find projects focused on building robust and scalable data architectures. Experience with data pipelines, ETL processes, cloud environments and performance optimization. Currently transitioning into Data Engineering, combining technical projects with continuous learning and real-world applications."
+     data-pt="Seja bem-vindo ao meu portfólio. Aqui você encontrará projetos focados na construção de arquiteturas de dados robustas e escaláveis. Experiência com pipelines de dados, processos de ETL, ambientes em nuvem e otimização de performance. Atualmente em transição para Engenharia de Dados, conciliando projetos práticos com aprendizado contínuo e aplicações reais.">
   </p>
 
   <div>
@@ -226,13 +267,11 @@
       <h3>WebTran Data Pipeline</h3>
 
       <p data-en="End-to-end data pipeline for automation and analytics."
-         data-pt="Pipeline de dados end-to-end para automação e análise.">
-      </p>
+         data-pt="Pipeline de dados end-to-end para automação e análise."></p>
 
       <a href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline" class="btn" target="_blank"
          data-en="View Project"
-         data-pt="Ver Projeto">
-      </a>
+         data-pt="Ver Projeto"></a>
     </div>
   </div>
 </section>
@@ -274,11 +313,38 @@
 </section>
 
 <script>
-function setLang(lang) {
-  document.querySelectorAll("[data-en]").forEach(el => {
-    el.innerText = el.getAttribute("data-" + lang);
-  });
+let currentLang = "en";
+let typingTimeout;
+
+function typeText(element, text, speed = 80) {
+  clearTimeout(typingTimeout);
+  element.innerText = "";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      element.innerText += text.charAt(i);
+      i++;
+      typingTimeout = setTimeout(typing, speed);
+    }
+  }
+
+  typing();
 }
+
+function setLang(lang) {
+  currentLang = lang;
+
+  document.querySelectorAll("[data-en]").forEach(el => {
+    if (el.id !== "typing-title") {
+      el.innerText = el.getAttribute("data-" + lang);
+    }
+  });
+
+  const title = document.getElementById("typing-title");
+  typeText(title, title.getAttribute("data-" + lang));
+}
+
 setLang("en");
 </script>
 
