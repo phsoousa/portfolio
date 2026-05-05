@@ -131,6 +131,27 @@
       border: 1px solid #1e293b;
     }
 
+    .cert-link {
+      text-decoration: none;
+      color: #e2e8f0;
+      display: block;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 18px;
+    }
+
+    .cert-link:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+    }
+
+    .cert-link .card {
+      transition: border 0.3s ease, background 0.3s ease;
+    }
+
+    .cert-link:hover .card {
+      border: 1px solid #38bdf8;
+      background: #111c33;
+    }
   </style>
 </head>
 
@@ -147,13 +168,12 @@
 
   <p data-en="Data Engineer" data-pt="Engenheiro de Dados"></p>
 
-  <!-- SOBRE -->
-  <p style="max-width:600px;margin:10px auto;color:#94a3b8;">
-    Data Engineer focused on building scalable data pipelines, ETL processes and cloud solutions.
+  <p style="max-width:600px;margin:10px auto;color:#94a3b8;"
+     data-en="Data Engineer focused on building scalable data pipelines, ETL processes and cloud solutions."
+     data-pt="Engenheiro de Dados focado na construção de pipelines escaláveis, processos de ETL e soluções em nuvem.">
   </p>
 
   <div>
-
     <a href="https://wa.me/5521994536481" class="btn">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
       WhatsApp
@@ -168,7 +188,6 @@
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="filter: invert(1);">
       GitHub
     </a>
-
   </div>
 </header>
 
@@ -192,11 +211,10 @@
 </section>
 
 <section>
-  <h2>Projects</h2>
+  <h2 data-en="Projects" data-pt="Projetos"></h2>
 
   <div class="projects-grid">
     <div class="card">
-
       <img src="assets/webtran-card.png" class="project-img">
 
       <div class="tags">
@@ -207,40 +225,50 @@
 
       <h3>WebTran Data Pipeline</h3>
 
-      <p>End-to-end data pipeline for automation and analytics.</p>
+      <p data-en="End-to-end data pipeline for automation and analytics."
+         data-pt="Pipeline de dados end-to-end para automação e análise.">
+      </p>
 
-      <a href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline" class="btn">
-        View Project
+      <a href="https://github.com/phsoousa/airflow-brawebtran-data-pipeline" class="btn" target="_blank"
+         data-en="View Project"
+         data-pt="Ver Projeto">
       </a>
-
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Certificates</h2>
+  <h2 data-en="Certificates" data-pt="Certificados"></h2>
 
   <div class="grid">
 
-    <div class="card">
-      <img src="assets/cert-fundamentos.png" class="cert-img">
-      <p>Fundamentos para Engenharia de Dados</p>
-    </div>
+    <a href="https://engenhariadedadosacademy.curseduca.pro/verify/d398bbd650dec4a9cd9cec052872a0fe68ac2c34" target="_blank" class="cert-link">
+      <div class="card">
+        <img src="assets/cert-fundamentos.png" class="cert-img">
+        <p data-en="Data Engineering Fundamentals" data-pt="Fundamentos para Engenharia de Dados"></p>
+      </div>
+    </a>
 
-    <div class="card">
-      <img src="assets/cert-python.png" class="cert-img">
-      <p>Python para Engenharia de Dados</p>
-    </div>
+    <a href="https://engenhariadedadosacademy.curseduca.pro/verify/03b9f866dd18256b92449934e4c2ac34a35567a8" target="_blank" class="cert-link">
+      <div class="card">
+        <img src="assets/cert-python.png" class="cert-img">
+        <p data-en="Python for Data Engineering" data-pt="Python para Engenharia de Dados"></p>
+      </div>
+    </a>
 
-    <div class="card">
-      <img src="assets/cert-sql.png" class="cert-img">
-      <p>SQL para Times de Dados</p>
-    </div>
+    <a href="https://engenhariadedadosacademy.curseduca.pro/verify/062982f77d41f866911d352772ff15be2643a01c" target="_blank" class="cert-link">
+      <div class="card">
+        <img src="assets/cert-sql.png" class="cert-img">
+        <p data-en="SQL for Data Teams" data-pt="SQL para Times de Dados"></p>
+      </div>
+    </a>
 
-    <div class="card">
-      <img src="assets/cert-ai-data-engineer.png" class="cert-img">
-      <p>Semana AI Data Engineer</p>
-    </div>
+    <a href="https://engenhariadedadosacademy.curseduca.pro/verify/3d9f170c38c836ea6df8d85348411f64dbd4db6b" target="_blank" class="cert-link">
+      <div class="card">
+        <img src="assets/cert-ai-data-engineer.png" class="cert-img">
+        <p data-en="AI Data Engineer Week" data-pt="Semana AI Data Engineer"></p>
+      </div>
+    </a>
 
   </div>
 </section>
